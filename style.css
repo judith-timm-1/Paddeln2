@@ -1,0 +1,374 @@
+/* ==========================
+   Google Fonts
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Special+Gothic+Expanded+One&display=swap');
+
+/* ==========================
+   Variablen
+========================== */
+:root {
+    --bg-dark: #17232f;
+    --bg-section: #204975;
+    --marine: #162231;
+    --blue-accent: #2f8cff;
+    --blue-hover: #4ca2ff;
+    --text-light: #f5f8fc;
+    --text-muted: #c8d3df;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* ==========================
+   Reset
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ==========================
+   Allgemein
+========================== */
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+h3,
+h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================
+   Hero
+========================== */
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(12,18,28,0.55),
+            rgba(12,18,28,0.75)
+        ),
+        url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    display: none;
+}
+
+.hero-content {
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: rgba(33, 77, 148, 0.15);
+    border: 1px solid rgba(47,140,255,0.4);
+    color: #dcecff;
+    font-size: 0.9rem;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+/* ==========================
+   Buttons
+========================== */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.95rem 1.7rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--blue-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--marine);
+}
+
+/* ==========================
+   Statusleiste
+========================== */
+.status-bar {
+    background: #10141d;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.status-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.refresh-btn {
+    cursor: pointer;
+    border: none;
+    background: var(--blue-accent);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* ==========================
+   Karten
+========================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+}
+
+.info-card,
+.location-card {
+    background: white;
+    color: var(--marine);
+    border-radius: 22px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover,
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: var(--blue-accent);
+}
+
+.card-header h3,
+.location-card h3 {
+    color: var(--marine);
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9eef5;
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+/* ==========================
+   Aktuelle Bedingungen
+========================== */
+#bedingungen {
+    background: var(--marine);
+}
+
+/* ==========================
+   Empfehlung
+========================== */
+.recommendation-card {
+    background: linear-gradient(
+        135deg,
+        #234d89,
+        #2f8cff
+    );
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+#recommendationText {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.good {
+    color: #b7ffd4;
+}
+
+.warning {
+    color: #fff5b1;
+}
+
+.bad {
+    color: #ffd2d2;
+}
+
+/* ==========================
+   Loader
+========================== */
+.loader-container {
+    display: none;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loader-container.active {
+    display: flex;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid var(--blue-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================
+   Fehlerbox
+========================== */
+.error-box {
+    width: min(700px, 90%);
+    margin: 2rem auto;
+    background: #ffdddd;
+    color: #821818;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+    background: #0e1216;
+    color: var(--text-muted);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .status-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recommendation-card {
+        padding: 2rem;
+    }
+}
