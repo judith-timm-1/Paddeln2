@@ -89,7 +89,7 @@ h4 {
             rgba(12,18,28,0.55),
             rgba(12,18,28,0.75)
         ),
-        url("images/hero.jpg");
+        url("hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
